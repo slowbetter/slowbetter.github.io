@@ -5,20 +5,20 @@
   
 
   
-  <title>hexo教程 | Hemo</title>
+  <title>深入理解java虚拟机 | Hemo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="内容">
-<meta name="keywords" content="博客,hexo">
+  <meta name="description" content="#深入理解java虚拟机——概述 ##走近java  java技术体系的过去、现在和未来 独立编译OpenJDK7  ##自动内存管理机制  虚拟机的内存是如何划分的。 什么样的代码和操作可能导致内存溢出异常 垃圾回收的算法和垃圾收集器的特点和运作原理 命令行工具和可视化故障处理工具 案例  ##虚拟机执行子系统  class文件的结构和各个组成部分，每个部分定义、数据结构和使用方法，class文">
+<meta name="keywords" content="java,虚拟机,概述">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo教程">
-<meta property="og:url" content="http://slowbetter.cn/2018/03/03/hexo教程/index.html">
+<meta property="og:title" content="深入理解java虚拟机">
+<meta property="og:url" content="http://slowbetter.cn/2018/03/03/深入理解java虚拟机/index.html">
 <meta property="og:site_name" content="Hemo">
-<meta property="og:description" content="内容">
+<meta property="og:description" content="#深入理解java虚拟机——概述 ##走近java  java技术体系的过去、现在和未来 独立编译OpenJDK7  ##自动内存管理机制  虚拟机的内存是如何划分的。 什么样的代码和操作可能导致内存溢出异常 垃圾回收的算法和垃圾收集器的特点和运作原理 命令行工具和可视化故障处理工具 案例  ##虚拟机执行子系统  class文件的结构和各个组成部分，每个部分定义、数据结构和使用方法，class文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-03T12:18:45.000Z">
+<meta property="og:updated_time" content="2018-03-03T13:35:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo教程">
-<meta name="twitter:description" content="内容">
+<meta name="twitter:title" content="深入理解java虚拟机">
+<meta name="twitter:description" content="#深入理解java虚拟机——概述 ##走近java  java技术体系的过去、现在和未来 独立编译OpenJDK7  ##自动内存管理机制  虚拟机的内存是如何划分的。 什么样的代码和操作可能导致内存溢出异常 垃圾回收的算法和垃圾收集器的特点和运作原理 命令行工具和可视化故障处理工具 案例  ##虚拟机执行子系统  class文件的结构和各个组成部分，每个部分定义、数据结构和使用方法，class文">
   
     <link rel="alternate" href="/atom.xml" title="Hemo" type="application/atom+xml">
   
@@ -69,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo教程" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-深入理解java虚拟机" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/03/hexo教程/" class="article-date">
-  <time datetime="2018-03-03T12:14:28.000Z" itemprop="datePublished">2018-03-03</time>
+    <a href="/2018/03/03/深入理解java虚拟机/" class="article-date">
+  <time datetime="2018-03-03T12:49:54.000Z" itemprop="datePublished">2018-03-03</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo教程/">Hexo教程</a>
+    <a class="article-category-link" href="/categories/技术/">技术</a>
   </div>
 
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      hexo教程
+      深入理解java虚拟机
     </h1>
   
 
@@ -95,15 +95,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>内容</p>
+        <p>#深入理解java虚拟机——概述</p>
+<p>##走近java</p>
+<ul>
+<li>java技术体系的过去、现在和未来</li>
+<li>独立编译OpenJDK7</li>
+</ul>
+<p>##自动内存管理机制</p>
+<ul>
+<li>虚拟机的内存是如何划分的。</li>
+<li>什么样的代码和操作可能导致内存溢出异常</li>
+<li>垃圾回收的算法和垃圾收集器的特点和运作原理</li>
+<li>命令行工具和可视化故障处理工具</li>
+<li>案例</li>
+</ul>
+<p>##虚拟机执行子系统</p>
+<ul>
+<li>class文件的结构和各个组成部分，每个部分定义、数据结构和使用方法，class文件如何存储和访问</li>
+<li>类加载过程的加载、验证、准备、解析、和初始化虚拟机分别执行了哪些动作。类加载器的工作原理及对虚拟机的意义</li>
+<li>虚拟机在执行代码时如何找到正确的方法，如何执行方法内的字节码，以及执行代码时涉及的内存结构</li>
+<li>4个类加载器及执行子系统，使用类加载器和处理字节码的一些值得欣赏和借鉴到思路。</li>
+</ul>
+<p>##程序编译和代码优化</p>
+<ul>
+<li>范型、主动装箱和拆箱、条件编译等多种语法糖等前因后果。注解检测程序命名规范</li>
+<li>讲解虚拟机的热点探测方法、HotSpot的即时编译器，编译触发条件。如何从虚拟机的外部观察和分析JIT编译的数据和结构。常见的编译优化技术。<br>##高效并发</li>
+<li>虚拟机内存模型的结构和操作，原子性和可见性、有序性。先行发生原则的规则及使用，线程在java语言中时如何实现的。</li>
+<li>线程安全，锁优化，同步实现的方式和虚拟机底层运作的原理。</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://slowbetter.cn/2018/03/03/hexo教程/" data-id="cjebeszwr0000posedajey7ef" class="article-share-link">Share</a>
+      <a data-url="http://slowbetter.cn/2018/03/03/深入理解java虚拟机/" data-id="cjebeu9dy0000qqsepty9b897" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概述/">概述</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/虚拟机/">虚拟机</a></li></ul>
 
     </footer>
   </div>
@@ -111,15 +138,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/03/深入理解java虚拟机/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          深入理解java虚拟机
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/03/hexo教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo教程</div>
+    </a>
   
 </nav>
 
