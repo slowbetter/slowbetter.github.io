@@ -7,21 +7,21 @@
   
   <title>Spark RDD介绍 | Hemo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列">
+  <meta name="description" content="RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列化">
 <meta name="keywords" content="spark,RDD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark RDD介绍">
 <meta property="og:url" content="http://slowbetter.cn/2018/03/07/RDD/index.html">
 <meta property="og:site_name" content="Hemo">
-<meta property="og:description" content="#RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列">
+<meta property="og:description" content="RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列化">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.blog.csdn.net/20160623111913455">
 <meta property="og:image" content="http://img.blog.csdn.net/20160622191518541">
 <meta property="og:image" content="http://img.blog.csdn.net/20160622192016312">
-<meta property="og:updated_time" content="2018-03-15T08:55:44.000Z">
+<meta property="og:updated_time" content="2018-03-15T09:13:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark RDD介绍">
-<meta name="twitter:description" content="#RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列">
+<meta name="twitter:description" content="RDD简介在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列化">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20160623111913455">
   
     <link rel="alternate" href="/atom.xml" title="Hemo" type="application/atom+xml">
@@ -99,9 +99,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#RDD简介<br>在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列化的。RDD可以cache到内存中，每次对RDD数据集的操作之后的结果，都可以存放到内存中，下一个操作可以直接从内存中输入，省去了MapReduce大量的磁盘IO操作。这对于迭代运算比较常见的机器学习算法, 交互式数据挖掘来说，效率提升比较大。</p>
-<p>##RDD的特点</p>
-<ul>
+        <h1 id="RDD简介"><a href="#RDD简介" class="headerlink" title="RDD简介"></a>RDD简介</h1><p>在集群背后，有一个非常重要的分布式数据架构，即弹性分布式数据集（Resilient Distributed Dataset，RDD）。RDD是Spark的最基本抽象,是对分布式内存的抽象使用，实现了以操作本地集合的方式来操作分布式数据集的抽象实现。RDD是Spark最核心的东西，它表示已被分区，不可变的并能够被并行操作的数据集合，不同的数据集格式对应不同的RDD实现。RDD必须是可序列化的。RDD可以cache到内存中，每次对RDD数据集的操作之后的结果，都可以存放到内存中，下一个操作可以直接从内存中输入，省去了MapReduce大量的磁盘IO操作。这对于迭代运算比较常见的机器学习算法, 交互式数据挖掘来说，效率提升比较大。</p>
+<h2 id="RDD的特点"><a href="#RDD的特点" class="headerlink" title="RDD的特点"></a>RDD的特点</h2><ul>
 <li>创建：只能通过转换从稳定存储中的数据或者其他RDD</li>
 <li>只读：状态不可变，不能修改</li>
 <li>分区：根据key来分区</li>
@@ -110,14 +109,13 @@
 <li>延迟计算，管道化</li>
 <li>操作：转换transformation和动作count/reduce/collect/save</li>
 </ul>
-<p>##RDD的好处</p>
-<ul>
+<h2 id="RDD的好处"><a href="#RDD的好处" class="headerlink" title="RDD的好处"></a>RDD的好处</h2><ul>
 <li>更高效实现容错，无需checkpoint</li>
 <li>RDD的 不变性可以实现Hadoop的MR的推测式执行</li>
 <li>RDD都是可序列化的</li>
 <li>批量操作，数据本地性。</li>
 </ul>
-<p>##RDD的内部属性<br>通过RDD的内部属性，用户可以获取相应的元数据信息。通过这些信息可以支持更复杂的算法或优化</p>
+<h2 id="RDD的内部属性"><a href="#RDD的内部属性" class="headerlink" title="RDD的内部属性"></a>RDD的内部属性</h2><p>通过RDD的内部属性，用户可以获取相应的元数据信息。通过这些信息可以支持更复杂的算法或优化</p>
 <ul>
 <li>分区列表</li>
 <li>计算分片的函数</li>
@@ -125,48 +123,42 @@
 <li>key-value型的RDD是根据哈希来分区的，类似于mapreduce当中的Paritioner接口，控制key分到哪个reduce</li>
 <li>每一个分片的优先计算位置（preferred locations），比如HDFS的block的所在位置应该是优先计算的位置。(存储的是一个表，可以将处理的分区“本地化”)</li>
 </ul>
-<p>##存储与分区</p>
-<ul>
+<h2 id="存储与分区"><a href="#存储与分区" class="headerlink" title="存储与分区"></a>存储与分区</h2><ul>
 <li>用户可以选择不同的存储级别存储RDD以便重用。RDD根据useDisk、useMemory、useOffHeap、deserialized、replication参数的组合定义存储级别</li>
 <li>当前RDD默认是存储于内存，但当内存不足时，RDD会spill到disk</li>
 <li>RDD在需要进行分区把数据分布于集群中时会根据每条记录Key进行分区（如Hash 分区），以此保证两个数据集在Join时能高效</li>
 </ul>
-<p>##容错机制</p>
-<ul>
+<h2 id="容错机制"><a href="#容错机制" class="headerlink" title="容错机制"></a>容错机制</h2><ul>
 <li>RDD的容错机制实现分布式数据集容错方法有两种：数据检查点和记录更新</li>
 <li>RDD的容错机制又称“血统”容错。 要实现这种“血统”容错机制，最大的难题就是如何表达父RDD和子RDD之间的依赖关系</li>
 <li>依赖关系可以分两种，窄依赖和宽依赖。窄依赖：子RDD中的每个数据块只依赖于父RDD中对应的有限个固定的数据块；宽依赖：子RDD中的一个数据块可以依赖于父RDD中的所有数据块。</li>
 <li>在“血统”链特别是有宽依赖的时候，需要在适当的时机设置数据检查点。也是这两个特性要求对于不同依赖关系要采取不同的任务调度机制和容错恢复机制。</li>
 </ul>
-<p>##Spark计算工作流</p>
-<ul>
+<h2 id="Spark计算工作流"><a href="#Spark计算工作流" class="headerlink" title="Spark计算工作流"></a>Spark计算工作流</h2><ul>
 <li>算子是RDD中定义的函数，可以对RDD中的数据进行转换和操作。</li>
 <li>输入：在Spark程序运行中，数据从外部数据空间（例如，HDFS、Scala集合或数据）输入到Spark，数据就进入了Spark运行时数据空间，会转化为Spark中的数据块，通过BlockManager进行管理。</li>
 <li>运行：在Spark数据输入形成RDD后，便可以通过变换算子fliter等，对数据操作并将RDD转化为新的RDD，通过行动（Action）算子，触发Spark提交作业。如果数据需要复用，可以通过Cache算子，将数据缓存到内存。</li>
 <li>输出：程序运行结束数据会输出Spark运行时空间，存储到分布式存储中（如saveAsTextFile输出到HDFS）或Scala数据或集合中（collect输出到Scala集合，count返回Scala Int型数据）。<br><img src="http://img.blog.csdn.net/20160623111913455" alt="算子和数据空间"></li>
 <li>Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实现，如MappedRDD、ShuffledRDD等子类。Spark将常用的大数据操作都转化成为RDD的子类。</li>
 </ul>
-<p>##编程模型</p>
-<ul>
+<h2 id="编程模型"><a href="#编程模型" class="headerlink" title="编程模型"></a>编程模型</h2><ul>
 <li>输入算子将Scala集合类型或存储中的数据吸入RDD空间，转为RDD。输入算子的输入大致有两类：一类针对 Scala集合类型，如parallelize；另一类针对存储数据，如上例中的textFile。输入算子的输出就是Spark空间的RDD。</li>
 <li>因为函数语义，RDD经过变换（transformation）算子生成新的RDD。变换算子的输入和输出都是RDD。</li>
 <li>从RDD到RDD的变换算子序列，一直在RDD空间发生。这里很重要的设计是lazy evaluation：计算并不实际发生，只是不断地记录到元数据。元数据的结构是DAG（有向无环图），其中每一个“顶点”是RDD（包括生产该RDD 的算子），从父RDD到子RDD有“边”，表示RDD间的依赖性。Spark给元数据DAG取了个很酷的名字，Lineage（世系）。这个 Lineage也是前面容错设计中所说的日志更新。</li>
 <li>Lineage一直增长，直到遇上行动（action）算子，这时 就要evaluate了，把刚才累积的所有算子一次性执行。行动算子的输入是RDD（以及该RDD在Lineage上依赖的所有RDD），输出是执行后生 成的原生数据，可能是Scala标量、集合类型的数据或存储。当一个算子的输出是上述类型时，该算子必然是行动算子，其效果则是从RDD空间返回原生数据空间。</li>
 </ul>
-<p>##运行逻辑</p>
-<ul>
+<h2 id="运行逻辑"><a href="#运行逻辑" class="headerlink" title="运行逻辑"></a>运行逻辑</h2><ul>
 <li>在Spark应用中，整个执行流程在逻辑上运算之间会形成有向无环图。</li>
 </ul>
-<p>##依赖关系</p>
-<ul>
+<h2 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h2><ul>
 <li>Stage划分的依据就是宽依赖，什么时候产生宽依赖呢？例如reduceByKey，groupByKey等Action。</li>
 <li>从后往前推理，遇到宽依赖就断开，遇到窄依赖就把当前的RDD加入到Stage中</li>
 <li>每个Stage里面的Task的数量是由该Stage中最后一个RDD的Partition数量决定的</li>
 <li>最后一个Stage里面的任务的类型是ResultTask，前面所有其他Stage里面的任务类型都是ShuffleMapTask</li>
-<li>代表当前Stage的算子一定是该Stage的最后一个计算步骤<br>##RDD如何操作<br>###RDD的创建方式</li>
+<li>代表当前Stage的算子一定是该Stage的最后一个计算步骤<h2 id="RDD如何操作"><a href="#RDD如何操作" class="headerlink" title="RDD如何操作"></a>RDD如何操作</h2><h3 id="RDD的创建方式"><a href="#RDD的创建方式" class="headerlink" title="RDD的创建方式"></a>RDD的创建方式</h3></li>
 <li>从Hadoop文件系统（或与Hadoop兼容的其他持久化存储系统，如Hive、Cassandra、HBase）输入（例如HDFS）创建</li>
 <li>从父RDD转换得到新RDD</li>
-<li>通过parallelize或makeRDD将单机数据创建为分布式RDD<br>###RDD的两种操作算子</li>
+<li>通过parallelize或makeRDD将单机数据创建为分布式RDD<h3 id="RDD的两种操作算子"><a href="#RDD的两种操作算子" class="headerlink" title="RDD的两种操作算子"></a>RDD的两种操作算子</h3></li>
 <li>转换（Transformation）：Transformation操作是延迟计算的，也就是说从一个RDD转换生成另一个RDD的转换操作不是马上执行，需要等到有Action操作的时候才会真正触发运算</li>
 <li>行动（Action）：Action算子会触发Spark提交作业（Job），并将数据输出Spark系统</li>
 </ul>
@@ -175,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://slowbetter.cn/2018/03/07/RDD/" data-id="cjesamrbd0004imse0nvy8bax" class="article-share-link">Share</a>
+      <a data-url="http://slowbetter.cn/2018/03/07/RDD/" data-id="cjesapews0004jlse9imtbggz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RDD/">RDD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
