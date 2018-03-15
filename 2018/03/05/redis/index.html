@@ -5,18 +5,20 @@
   
 
   
-  <title>Tag: 虚拟机 | Hemo</title>
+  <title>redis数据结构 | Hemo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="grow up">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hemo">
-<meta property="og:url" content="http://slowbetter.cn/tags/虚拟机/index.html">
+  <meta name="description" content="#redis常用的数据类型  String 正常的key，正常的value，序列化和反序列化 Hash 正常的key，HashMap(filed，value)代表对 List key是链表名字，每个子元素都是string类型的双向链表 Set Set名字，String类型无序集合 Zset Zset名字，一列value，一列存顺序">
+<meta name="keywords" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis数据结构">
+<meta property="og:url" content="http://slowbetter.cn/2018/03/05/redis/index.html">
 <meta property="og:site_name" content="Hemo">
-<meta property="og:description" content="grow up">
+<meta property="og:description" content="#redis常用的数据类型  String 正常的key，正常的value，序列化和反序列化 Hash 正常的key，HashMap(filed，value)代表对 List key是链表名字，每个子元素都是string类型的双向链表 Set Set名字，String类型无序集合 Zset Zset名字，一列value，一列存顺序">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-15T08:51:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hemo">
-<meta name="twitter:description" content="grow up">
+<meta name="twitter:title" content="redis数据结构">
+<meta name="twitter:description" content="#redis常用的数据类型  String 正常的key，正常的value，序列化和反序列化 Hash 正常的key，HashMap(filed，value)代表对 List key是链表名字，每个子元素都是string类型的双向链表 Set Set名字，String类型无序集合 Zset Zset名字，一列value，一列存顺序">
   
     <link rel="alternate" href="/atom.xml" title="Hemo" type="application/atom+xml">
   
@@ -67,40 +69,74 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/03/深入理解java虚拟机/" class="archive-article-date">
-  <time datetime="2018-03-03T12:49:54.000Z" itemprop="datePublished">3月 3</time>
+        <section id="main"><article id="post-redis" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/05/redis/" class="article-date">
+  <time datetime="2018-03-05T12:49:54.000Z" itemprop="datePublished">2018-03-05</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/缓存/">缓存</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/03/深入理解java虚拟机/">深入理解java虚拟机</a>
+    <h1 class="article-title" itemprop="name">
+      redis数据结构
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#redis常用的数据类型</p>
+<ul>
+<li>String 正常的key，正常的value，序列化和反序列化</li>
+<li>Hash 正常的key，HashMap(filed，value)代表对</li>
+<li>List key是链表名字，每个子元素都是string类型的双向链表</li>
+<li>Set Set名字，String类型无序集合</li>
+<li>Zset Zset名字，一列value，一列存顺序</li>
+</ul>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://slowbetter.cn/2018/03/05/redis/" data-id="cjesab74t0005ebse8dkbcspp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/">redis</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/06/es/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ES知识梳理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/04/学习计划/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习计划</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
